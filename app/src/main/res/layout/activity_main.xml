@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apps.palka.matt.turboplayer.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/musics"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/categoryMusic">
+
+            <TextView
+                style="@style/mainScreenText"
+                android:drawableTop="@drawable/ic_music_note_black_36dp"
+                android:text="@string/music" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/podcasts"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/categoryPodcast">
+
+            <TextView
+                style="@style/mainScreenText"
+                android:drawableTop="@drawable/ic_settings_voice_black_36dp"
+                android:text="@string/podcast" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/books"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/categoryBooks">
+
+            <TextView
+                style="@style/mainScreenText"
+                android:drawableTop="@drawable/ic_import_contacts_black_36dp"
+                android:text="@string/books" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/meditations"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/categoryMeditation">
+
+            <TextView
+                style="@style/mainScreenText"
+                android:drawableTop="@drawable/ic_accessibility_black_36dp"
+                android:text="@string/meditation" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

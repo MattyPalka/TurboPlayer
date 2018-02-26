@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nowPlayingScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/categoryMusic"
+    tools:context="com.apps.palka.matt.turboplayer.NowPlayingActivity">
+
+    <ImageView
+        android:layout_width="144dp"
+        android:layout_height="144dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_play_arrow_black_24dp" />
+
+    <LinearLayout
+        android:id="@+id/nowPlayingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttonsContainer"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/playingTitle"
+            style="@style/mainScreenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="End Game" />
+
+        <TextView
+            style="@style/mainScreenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - " />
+
+        <TextView
+            android:id="@+id/playingArtist"
+            style="@style/mainScreenText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Taylor Swift" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp"
+        android:background="#80FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/previousTrack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_skip_previous_black_24dp" />
+
+        <ImageView
+            android:id="@+id/pauseTrack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_pause_black_24dp" />
+
+        <ImageView
+            android:id="@+id/stopTrack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_stop_black_24dp" />
+
+        <ImageView
+            android:id="@+id/nextTrack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_skip_next_black_24dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

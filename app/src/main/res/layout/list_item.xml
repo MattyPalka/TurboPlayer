@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textContainer"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:minHeight="88dp"
+    tools:background="@color/categoryMusic"
+    tools:context="com.apps.palka.matt.turboplayer.MusicActivity">
+
+    <ImageView
+        android:id="@+id/coverArt"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:scaleType="centerInside"
+        tools:src="@drawable/ic_play_arrow_black_24dp" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/coverArt"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/titleName"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="bottom"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            tools:text="End game" />
+
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/titleName"
+            android:gravity="top"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/background_light"
+            tools:text="Taylor Swift" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

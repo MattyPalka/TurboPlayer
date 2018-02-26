@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="categoryMusic">@android:color/holo_green_light</color>
+    <color name="categoryPodcast">@android:color/holo_orange_light</color>
+    <color name="categoryBooks">@android:color/holo_red_light</color>
+    <color name="categoryMeditation">@android:color/holo_blue_light</color>
+</resources>
