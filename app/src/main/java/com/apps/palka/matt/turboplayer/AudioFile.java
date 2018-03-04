@@ -58,5 +58,4 @@ public class AudioFile {
     public int getTrackCoverImgId(){
         return mTrackCoverImgId;
     }
-
 }

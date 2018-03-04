@@ -17,13 +17,11 @@ public class PodcastActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
 
-        ArrayList<AudioFile> audioFiles = new ArrayList<>();
+        final ArrayList<AudioFile> audioFiles = new ArrayList<>();
 
         audioFiles.add(new AudioFile(R.string.are_you_there, R.string.alien_guy));
         audioFiles.add(new AudioFile(R.string.living_with_parents, R.string.random_dude));
         audioFiles.add(new AudioFile(R.string.mom_let_me_out, R.string.this_kid));
-
-
 
         AudioFileAdapter itemsAdapter = new AudioFileAdapter(this, audioFiles, R.color.categoryPodcast);
 
@@ -34,9 +32,14 @@ public class PodcastActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                /** Get access to items from Array list*/
+                AudioFile audioFile = audioFiles.get(i);
+
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 Bundle extras = new Bundle();
                 extras.putInt("colorID", R.color.categoryPodcast);
+                extras.putInt("trackTitleID", audioFile.getTrackTitleId());
+                extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
                 intent.putExtras(extras);
                 startActivity(intent);
             }

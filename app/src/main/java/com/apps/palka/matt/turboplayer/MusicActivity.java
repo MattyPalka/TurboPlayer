@@ -17,7 +17,7 @@ public class MusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
 
-        ArrayList<AudioFile> audioFiles = new ArrayList<>();
+        final ArrayList<AudioFile> audioFiles = new ArrayList<>();
 
         audioFiles.add(new AudioFile(R.string.end_game, R.string.taylor_swift));
         audioFiles.add(new AudioFile(R.string.abbey_road, R.string.beatles));
@@ -40,9 +40,14 @@ public class MusicActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                /** Get access to items from Array list*/
+                AudioFile audioFile = audioFiles.get(i);
+
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 Bundle extras = new Bundle();
                 extras.putInt("colorID", R.color.categoryMusic);
+                extras.putInt("trackTitleID", audioFile.getTrackTitleId());
+                extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
                 intent.putExtras(extras);
                 startActivity(intent);
             }

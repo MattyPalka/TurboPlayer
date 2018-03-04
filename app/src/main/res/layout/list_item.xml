@@ -17,7 +17,6 @@
         tools:src="@drawable/ic_play_arrow_black_24dp" />
 
     <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="88dp"
         android:layout_alignParentBottom="true"
@@ -46,8 +45,5 @@
             android:textColor="@android:color/background_light"
             tools:text="Taylor Swift" />
 
-
     </RelativeLayout>
-
-
 </LinearLayout>

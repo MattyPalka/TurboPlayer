@@ -19,13 +19,11 @@ public class BooksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
 
-        ArrayList<AudioFile> audioFiles = new ArrayList<>();
+        final ArrayList<AudioFile> audioFiles = new ArrayList<>();
 
         audioFiles.add(new AudioFile(R.string.chrismas_carol, R.string.charles_dickens));
         audioFiles.add(new AudioFile(R.string.troy, R.string.homer));
         audioFiles.add(new AudioFile(R.string.romeo_and_juliet, R.string.william_shakespear));
-
-
 
         AudioFileAdapter itemsAdapter = new AudioFileAdapter(this, audioFiles, R.color.categoryBooks);
 
@@ -36,9 +34,14 @@ public class BooksActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                /** Get access to items from Array list*/
+                AudioFile audioFile = audioFiles.get(i);
+
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 Bundle extras = new Bundle();
                 extras.putInt("colorID", R.color.categoryBooks);
+                extras.putInt("trackTitleID", audioFile.getTrackTitleId());
+                extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
                 intent.putExtras(extras);
                 startActivity(intent);
             }
@@ -56,5 +59,4 @@ public class BooksActivity extends AppCompatActivity {
             }
         });
     }
-
 }

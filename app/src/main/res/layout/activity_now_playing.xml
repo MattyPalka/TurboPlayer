@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nowPlayingScreen"
+    android:id="@+id/now_playing_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,68 +17,68 @@
         android:src="@drawable/ic_play_arrow_black_24dp" />
 
     <LinearLayout
-        android:id="@+id/nowPlayingText"
+        android:id="@+id/now_playing_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/buttonsContainer"
+        android:layout_above="@id/buttons_container"
         android:layout_margin="16dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/playingTitle"
-            style="@style/mainScreenText"
+            android:id="@+id/playing_title"
+            style="@style/main_screen_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="End Game" />
 
         <TextView
-            style="@style/mainScreenText"
+            style="@style/main_screen_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" - " />
 
         <TextView
-            android:id="@+id/playingArtist"
-            style="@style/mainScreenText"
+            android:id="@+id/playing_artist"
+            style="@style/main_screen_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Taylor Swift" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/buttonsContainer"
+        android:id="@+id/buttons_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
-        android:background="#80FFFFFF"
+        android:background="@color/transp_white"
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingBottom="16dp">
 
         <ImageView
-            android:id="@+id/previousTrack"
+            android:id="@+id/previous_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:src="@drawable/ic_skip_previous_black_24dp" />
 
         <ImageView
-            android:id="@+id/pauseTrack"
+            android:id="@+id/pause_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginLeft="8dp"
             android:src="@drawable/ic_pause_black_24dp" />
 
         <ImageView
-            android:id="@+id/stopTrack"
+            android:id="@+id/stop_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginLeft="8dp"
             android:src="@drawable/ic_stop_black_24dp" />
 
         <ImageView
-            android:id="@+id/nextTrack"
+            android:id="@+id/next_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:layout_marginLeft="8dp"

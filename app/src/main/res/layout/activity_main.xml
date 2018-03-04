@@ -21,7 +21,7 @@
             android:background="@color/categoryMusic">
 
             <TextView
-                style="@style/mainScreenText"
+                style="@style/main_screen_text"
                 android:drawableTop="@drawable/ic_music_note_black_36dp"
                 android:text="@string/music" />
         </LinearLayout>
@@ -34,7 +34,7 @@
             android:background="@color/categoryPodcast">
 
             <TextView
-                style="@style/mainScreenText"
+                style="@style/main_screen_text"
                 android:drawableTop="@drawable/ic_settings_voice_black_36dp"
                 android:text="@string/podcast" />
         </LinearLayout>
@@ -54,7 +54,7 @@
             android:background="@color/categoryBooks">
 
             <TextView
-                style="@style/mainScreenText"
+                style="@style/main_screen_text"
                 android:drawableTop="@drawable/ic_import_contacts_black_36dp"
                 android:text="@string/books" />
         </LinearLayout>
@@ -67,7 +67,7 @@
             android:background="@color/categoryMeditation">
 
             <TextView
-                style="@style/mainScreenText"
+                style="@style/main_screen_text"
                 android:drawableTop="@drawable/ic_accessibility_black_36dp"
                 android:text="@string/meditation" />
         </LinearLayout>

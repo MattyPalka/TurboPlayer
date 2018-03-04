@@ -17,7 +17,7 @@ public class MeditationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list);
 
-        ArrayList<AudioFile> audioFiles = new ArrayList<>();
+        final ArrayList<AudioFile> audioFiles = new ArrayList<>();
 
         audioFiles.add(new AudioFile(R.string.forest, R.string.nature));
         audioFiles.add(new AudioFile(R.string.sea, R.string.nature));
@@ -34,9 +34,14 @@ public class MeditationActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                /** Get access to items from Array list*/
+                AudioFile audioFile = audioFiles.get(i);
+
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 Bundle extras = new Bundle();
                 extras.putInt("colorID", R.color.categoryMeditation);
+                extras.putInt("trackTitleID", audioFile.getTrackTitleId());
+                extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
                 intent.putExtras(extras);
                 startActivity(intent);
             }

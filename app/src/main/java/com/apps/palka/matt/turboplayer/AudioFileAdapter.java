@@ -22,7 +22,6 @@ public class AudioFileAdapter extends ArrayAdapter<AudioFile> {
     /** Resource ID for the background color of the list*/
     private int mColorResourceId;
 
-
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
      * The context is used to inflate the layout file, and the list is the data we want
@@ -79,7 +78,6 @@ public class AudioFileAdapter extends ArrayAdapter<AudioFile> {
         // Get the image resource ID from the current AndroidFlavor object and
         // set the image to iconView
         iconView.setImageResource(currentAudioFile.getTrackCoverImgId());
-
 
         //set the theme color for the list view
         View textContainer = listItemView.findViewById(R.id.textContainer);
