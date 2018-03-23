@@ -48,21 +48,13 @@ public class MusicActivity extends AppCompatActivity {
                 extras.putInt("colorID", R.color.categoryMusic);
                 extras.putInt("trackTitleID", audioFile.getTrackTitleId());
                 extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
+                if (audioFile.getAudioFileId() != -1) {
+                    extras.putInt("trackID", audioFile.getAudioFileId());
+                }
                 intent.putExtras(extras);
                 startActivity(intent);
             }
         });
 
-        LinearLayout nowPlayingBottom = (LinearLayout) findViewById(R.id.nowPlayingBox);
-        nowPlayingBottom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
-                Bundle extras = new Bundle();
-                extras.putInt("colorID", R.color.categoryMusic);
-                intent.putExtras(extras);
-                startActivity(intent);
-            }
-        });
     }
 }

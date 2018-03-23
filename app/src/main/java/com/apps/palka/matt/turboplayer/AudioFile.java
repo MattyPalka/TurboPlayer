@@ -9,7 +9,7 @@ package com.apps.palka.matt.turboplayer;
 public class AudioFile {
 
     /** Audio resource for the track */
-    private int mAudioFileId;
+    private int mAudioFileId = -1;
 
     /** String resource for the track author / artist */
     private int mTrackAuthorId;
@@ -19,6 +19,8 @@ public class AudioFile {
 
     /** Image resource for the track cover image */
     private int mTrackCoverImgId;
+
+
 
     /**
      * Create a new AudioFile object
@@ -39,6 +41,13 @@ public class AudioFile {
         mTrackTitleId = trackTitleId;
     }
 
+    public AudioFile(int audioFileId, int trackTitleId, int trackAuthorId) {
+        mAudioFileId = audioFileId;
+        mTrackAuthorId = trackAuthorId;
+        mTrackTitleId = trackTitleId;
+    }
+
+
     /** Get the audio file resource ID */
     public int getAudioFileId(){
         return mAudioFileId;
@@ -58,4 +67,7 @@ public class AudioFile {
     public int getTrackCoverImgId(){
         return mTrackCoverImgId;
     }
+
+
+
 }

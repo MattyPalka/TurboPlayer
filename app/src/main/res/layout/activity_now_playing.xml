@@ -10,6 +10,7 @@
     tools:context="com.apps.palka.matt.turboplayer.NowPlayingActivity">
 
     <ImageView
+        android:id="@+id/play_button"
         android:layout_width="144dp"
         android:layout_height="144dp"
         android:layout_centerHorizontal="true"
@@ -61,27 +62,31 @@
             android:id="@+id/previous_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
+            android:background="?android:selectableItemBackground"
             android:src="@drawable/ic_skip_previous_black_24dp" />
 
         <ImageView
             android:id="@+id/pause_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="?android:selectableItemBackground"
             android:src="@drawable/ic_pause_black_24dp" />
 
         <ImageView
             android:id="@+id/stop_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="?android:selectableItemBackground"
             android:src="@drawable/ic_stop_black_24dp" />
 
         <ImageView
             android:id="@+id/next_track"
             android:layout_width="44dp"
             android:layout_height="44dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="16dp"
+            android:background="?android:selectableItemBackground"
             android:src="@drawable/ic_skip_next_black_24dp" />
 
     </LinearLayout>

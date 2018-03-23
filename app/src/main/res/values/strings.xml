@@ -42,4 +42,14 @@
     <string name="come_as_you_are">Come As You Are</string>
     <string name="perfect">Perfect</string>
     <string name="ed_sheeran">Ed Sheeran</string>
+    <string name="mountain">Mountain</string>
+    <string name="free_mindfulness">Free Mindfullness</string>
+    <string name="life_happens">Life happens</string>
+    <string name="breathing">breathing</string>
+    <string name="bells">bells</string>
+    <string name="body_meditation">body meditation</string>
+    <string name="padraig">padraig</string>
+    <string name="still_mind">still mind</string>
+    <string name="vidyamala">vidyamala</string>
+    <string name="tension_release">tension release</string>
 </resources>

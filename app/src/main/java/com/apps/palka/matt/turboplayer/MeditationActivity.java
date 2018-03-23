@@ -19,15 +19,17 @@ public class MeditationActivity extends AppCompatActivity {
 
         final ArrayList<AudioFile> audioFiles = new ArrayList<>();
 
-        audioFiles.add(new AudioFile(R.string.forest, R.string.nature));
-        audioFiles.add(new AudioFile(R.string.sea, R.string.nature));
-        audioFiles.add(new AudioFile(R.string.coffee_house, R.string.urban));
-        audioFiles.add(new AudioFile(R.string.birds, R.string.nature));
-        audioFiles.add(new AudioFile(R.string.city_traffic, R.string.urban));
+        audioFiles.add(new AudioFile(R.raw.still_mind_4_minute_body_scan, R.string.body_meditation, R.string.still_mind));
+        audioFiles.add(new AudioFile(R.raw.padraig_ten_minute_mindfulness_of_breathing, R.string.padraig, R.string.free_mindfulness));
+        audioFiles.add(new AudioFile(R.raw.marc_breath_sound_body_meditation, R.string.body_meditation, R.string.breathing));
+        audioFiles.add(new AudioFile(R.raw.free_mindfulness_10_minute_just_bells, R.string.bells, R.string.free_mindfulness));
+        audioFiles.add(new AudioFile(R.raw.life_happens_5_minute_breathing, R.string.life_happens, R.string.breathing));
+        audioFiles.add(new AudioFile(R.raw.free_mindfulness_mountain_meditation, R.string.mountain, R.string.free_mindfulness));
+        audioFiles.add(new AudioFile(R.raw.vidyamala_tension_release, R.string.vidyamala, R.string.tension_release));
 
         AudioFileAdapter itemsAdapter = new AudioFileAdapter(this, audioFiles, R.color.categoryMeditation);
 
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = findViewById(R.id.list);
 
         listView.setAdapter(itemsAdapter);
 
@@ -37,26 +39,21 @@ public class MeditationActivity extends AppCompatActivity {
                 /** Get access to items from Array list*/
                 AudioFile audioFile = audioFiles.get(i);
 
+
+
                 Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 Bundle extras = new Bundle();
                 extras.putInt("colorID", R.color.categoryMeditation);
                 extras.putInt("trackTitleID", audioFile.getTrackTitleId());
                 extras.putInt("trackAuthorID", audioFile.getTrackAuthorId());
+                if (audioFile.getAudioFileId() != -1) {
+                    extras.putInt("trackID", audioFile.getAudioFileId());
+                }
                 intent.putExtras(extras);
                 startActivity(intent);
             }
         });
 
-        LinearLayout nowPlayingBottom = (LinearLayout) findViewById(R.id.nowPlayingBox);
-        nowPlayingBottom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), NowPlayingActivity.class);
-                Bundle extras = new Bundle();
-                extras.putInt("colorID", R.color.categoryMeditation);
-                intent.putExtras(extras);
-                startActivity(intent);
-            }
-        });
+
     }
 }
