@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,10 +17,10 @@ public class MainActivity extends AppCompatActivity {
         /*
          * connects the views/button/choosing screens with java file
          */
-        LinearLayout music = (LinearLayout) findViewById(R.id.musics);
-        LinearLayout podcast = (LinearLayout) findViewById(R.id.podcasts);
-        LinearLayout book = (LinearLayout) findViewById(R.id.books);
-        LinearLayout meditation = (LinearLayout) findViewById(R.id.meditations);
+        TextView music = findViewById(R.id.musics);
+        TextView podcast = findViewById(R.id.podcasts);
+        TextView book = findViewById(R.id.books);
+        TextView meditation = findViewById(R.id.meditations);
 
         music.setOnClickListener(new View.OnClickListener() {
             @Override
